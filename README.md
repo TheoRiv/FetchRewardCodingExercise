@@ -9,7 +9,7 @@ Java 8 ==> https://www.oracle.com/java/technologies/javase/javase-jdk8-downloads
 
 Don't forget to make sure the paths are configured.
 
-Go to the project folder and run the following command: 
+Download and unzip the project. Go to the project folder and run the following command: 
 >mvn clean install
 
 The app will download all the required dependencies. In case of errors, make sure your firewall and certificates are not blocking the download. 
