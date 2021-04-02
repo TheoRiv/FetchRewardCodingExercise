@@ -17,13 +17,19 @@ The app will download all the required dependencies. In case of errors, make sur
 Then to start the app, use the following command:
 >mvn tomcat7:run
 
+The last lines in your console should look like this:
+
+![screenshot.PNG](https://github.com/TheoRiv/FetchRewardCodingExercise/blob/main/screenshot.PNG)
+
 The application webservice is now running and working. You will find in the project the following postman collection:
 >FetchRewards.postman_collection
 
 This collection contains 3 calls: 
 
-GetBalancePoints: return the list of payers and their point balance
+GetBalancePoints: return the list of payers and their point balance (GET: http://localhost:8090/fetchrewards/getbalancepoints)
 
-AddTransaction: add a transaction to an existing payer. If the payer doesn't have enough points, or don't exist, return null
+AddTransaction: add a transaction to an existing payer. If the payer doesn't have enough points, or don't exist, return null 
+(POST: http://localhost:8090/fetchrewards/addtransaction)
 
-SpendPoints: spend points using the payers' balance. If the payers don't have enough points, return empty list.
+SpendPoints: spend points using the payers' balance. If the payers don't have enough points, return empty list. 
+(POST: http://localhost:8090/fetchrewards/spendpoints)
