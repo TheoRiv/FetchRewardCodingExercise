@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "2308e806-93bf-46c1-8c1c-e3eb32626080",
+		"name": "FetchRewards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "SpendPoints",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "spendPointsValue",
+							"value": "3000",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/fetchrewards/spendpoints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"fetchrewards",
+						"spendpoints"
+					]
+				},
+				"description": "Spend points using the payers' balance. If the payers don't have enough points, return empty list."
+			},
+			"response": []
+		},
+		{
+			"name": "AddTransaction",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "payerName",
+							"value": "UNILEVER",
+							"type": "text"
+						},
+						{
+							"key": "transactionPoints",
+							"value": "400",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/fetchrewards/addtransaction",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"fetchrewards",
+						"addtransaction"
+					]
+				},
+				"description": "Add a transaction to an existing payer. If the payer doesn't have enough points, return null"
+			},
+			"response": []
+		},
+		{
+			"name": "GetBalancePoints",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/fetchrewards/getbalancepoints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"fetchrewards",
+						"getbalancepoints"
+					]
+				},
+				"description": "Return the list of payers and their point balance"
+			},
+			"response": []
+		}
+	]
+}
